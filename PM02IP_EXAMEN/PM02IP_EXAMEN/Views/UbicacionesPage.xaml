@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02IP_EXAMEN.Views.UbicacionesPage">
+
+    <StackLayout>
+
+        <ListView x:Name="lstUbicaciones" ItemTapped="lstUbicaciones_ItemTapped" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                            <Label Text="{Binding latitud}" Grid.Row="0" Grid.Column="1" TextColor="Black" x:Name="txtlatitud"/>
+                            <Label Text="{Binding longitud}" Grid.Row="0" Grid.Column="2" TextColor="Black" x:Name="txtlongitud"/>
+                            <Label Text="{Binding descripcionCorta}" Grid.Row="0" Grid.Column="3" TextColor="Black" x:Name="txtdescripcorta"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+     
+        <RelativeLayout>
+            <Button Text="Eliminar" Margin="20,0,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
+            <Button Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
+        </RelativeLayout>
+    </StackLayout>
+   
+   
+
+   
+
+</ContentPage>
