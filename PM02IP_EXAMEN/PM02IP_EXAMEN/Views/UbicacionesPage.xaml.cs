@@ -45,7 +45,8 @@ namespace PM02IP_EXAMEN.Views
                 if (answer == true)
                 {
                     await App.DataBaseSQLite.EliminarUbicacion(ubicacion);
-                    lstUbicaciones.RemoveBinding(ListView.ItemsSourceProperty);
+                   
+
                 }
 
             }
@@ -86,15 +87,8 @@ namespace PM02IP_EXAMEN.Views
             var ubicacion = lstUbicaciones.SelectedItem as Models.Localizacion;
             if (ubicacion != null)
             {
-
-                bool answer = await DisplayAlert("Alerta", "Seleccione un registro para ver ubicacion " + ubicacion.codigo + " ? Esto puede generar conflictos", "Yes", "No");
-                Debug.WriteLine("Answer: " + answer);
-                if (answer == true)
-                {
-
-
                     await Navigation.PushAsync(new MapsPage());
-                }
+                
 
             }
             else
