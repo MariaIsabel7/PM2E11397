@@ -74,5 +74,35 @@ namespace PM02IP_EXAMEN.Views
                 await DisplayAlert("Alerta", "Seleccione un registro", "Ok");
             }
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void VerMapa_Clicked(object sender, EventArgs e)
+        {
+
+            var ubicacion = lstUbicaciones.SelectedItem as Models.Localizacion;
+            if (ubicacion != null)
+            {
+
+                bool answer = await DisplayAlert("Alerta", "Seleccione un registro para ver ubicacion " + ubicacion.codigo + " ? Esto puede generar conflictos", "Yes", "No");
+                Debug.WriteLine("Answer: " + answer);
+                if (answer == true)
+                {
+
+
+                    await Navigation.PushAsync(new MapsPage());
+                }
+
+            }
+            else
+            {
+                await DisplayAlert("Alerta", "Seleccione un registro para ver ubicacion", "Ok");
+            }
+
+
+        }
     }
 }

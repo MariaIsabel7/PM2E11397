@@ -4,6 +4,8 @@
              x:Class="PM02IP_EXAMEN.Views.MapsPage">
 
 
-    <maps:Map x:Name="Maps" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsShowingUser="True"   MapType="Street"/>
+    <maps:Map x:Name="Maps" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsShowingUser="True"/>
 
+    
+   
 </ContentPage>

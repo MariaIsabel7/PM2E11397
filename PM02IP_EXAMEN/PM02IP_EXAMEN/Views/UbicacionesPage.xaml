@@ -41,10 +41,10 @@
         <RelativeLayout>
             
             <Button Text="Eliminar" Margin="20,0,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="btneliminar_Clicked" Command="{Binding EliminarUbicacion}"/>
-            <Button Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
+            <Button x:Name="VerMapa" Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="VerMapa_Clicked"/>
         </RelativeLayout>
     </StackLayout>
-   
+    
    
 
    
