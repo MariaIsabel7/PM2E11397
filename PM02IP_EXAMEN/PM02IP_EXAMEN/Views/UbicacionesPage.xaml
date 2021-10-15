@@ -41,7 +41,7 @@
         <RelativeLayout>
 
             <Button Text="Eliminar" Margin="20,0,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="btneliminar_Clicked"/>
-            <Button Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
+            <Button Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="Button_Clicked"/>
         </RelativeLayout>
     </StackLayout>
    

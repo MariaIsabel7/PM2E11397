@@ -45,7 +45,7 @@ namespace PM02IP_EXAMEN.Views
                 if (answer == true)
                 {
                     await App.DataBaseSQLite.EliminarUbicacion(ubicacion);
-
+                    lstUbicaciones.ItemsSource = "";
                 }
 
             }
@@ -73,6 +73,10 @@ namespace PM02IP_EXAMEN.Views
             {
                 await DisplayAlert("Alerta", "Seleccione un registro", "Ok");
             }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
         }
     }
 }
