@@ -71,7 +71,7 @@ namespace PM02IP_EXAMEN.Views
             }
             else
             {
-                await DisplayAlert("Alerta", "Seleccione un registro", "Ok");
+                await DisplayAlert("Alerta", "Seleccione un registro", "OK");
             }
         }
 
