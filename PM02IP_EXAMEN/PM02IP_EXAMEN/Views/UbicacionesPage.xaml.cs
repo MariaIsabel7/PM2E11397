@@ -46,7 +46,7 @@ namespace PM02IP_EXAMEN.Views
                 if (answer == true)
                 {
                     await App.DataBaseSQLite.EliminarUbicacion(ubicacion);
-                    await Navigation.PushAsync(new UbicacionesPage());
+                    lstUbicaciones.RemoveBinding(ListView.ItemsSourceProperty);
                 }
 
             }
