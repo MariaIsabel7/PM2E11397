@@ -5,7 +5,7 @@
 
     <StackLayout>
 
-        <ListView x:Name="lstUbicaciones" ItemTapped="lstUbicaciones_ItemTapped" IsRefreshing = "{Binding IsRefreshing}">
+        <ListView x:Name="lstUbicaciones" IsRefreshing = "{Binding IsRefreshing}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
