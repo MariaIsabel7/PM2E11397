@@ -19,9 +19,9 @@
         <Button Text="Obtener Ubicacion" x:Name="btnobtenerubicacion" HorizontalOptions="Center" Background="Aqua" TextColor="Gray" HeightRequest="40" FontSize="12" Margin="0,20,0,0"/>
 
 
-        <Entry  x:Name="txtlatitud" Placeholder="Latitud" Keyboard="Text" Margin="30,40,30,0"  FontSize="15"/>
+        <Entry  x:Name="txtlatitud" Placeholder="Latitud" Keyboard="Text" Margin="30,40,30,0"  FontSize="15" IsReadOnly="True"/>
 
-        <Entry  x:Name="txtlongitud" Placeholder="Longitud" Keyboard="Text" Margin="30,20,30,0"  FontSize="15"/>
+        <Entry  x:Name="txtlongitud" Placeholder="Longitud" Keyboard="Text" Margin="30,20,30,0"  FontSize="15" IsReadOnly="True"/>
 
         <Editor x:Name="txtdescripcion" Margin="30,20,30,0" Keyboard="Text" Placeholder="Describa la Ubicacion"  FontSize="15"/>
 

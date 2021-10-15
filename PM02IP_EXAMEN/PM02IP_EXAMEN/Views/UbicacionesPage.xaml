@@ -5,23 +5,23 @@
 
     <StackLayout>
 
-        <ListView x:Name="lstUbicaciones" ItemTapped="lstUbicaciones_ItemTapped" Margin="10">
+        <ListView x:Name="lstUbicaciones" ItemTapped="lstUbicaciones_ItemTapped" IsRefreshing = "{Binding IsRefreshing}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
-                                <RowDefinition Height="*" />
+                                <RowDefinition Height="auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions >
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                            <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" TextColor="Black" x:Name="txtcodigo"/>
                             <Label Text="{Binding latitud}" Grid.Row="0" Grid.Column="1" TextColor="Black" x:Name="txtlatitud"/>
                             <Label Text="{Binding longitud}" Grid.Row="0" Grid.Column="2" TextColor="Black" x:Name="txtlongitud"/>
                             <Label Text="{Binding descripcionCorta}" Grid.Row="0" Grid.Column="3" TextColor="Black" x:Name="txtdescripcorta"/>
@@ -36,7 +36,7 @@
 
      
         <RelativeLayout>
-            <Button Text="Eliminar" Margin="20,0,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
+            <Button Text="Eliminar" Margin="20,0,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="btneliminar_Clicked"/>
             <Button Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
         </RelativeLayout>
     </StackLayout>

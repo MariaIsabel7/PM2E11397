@@ -12,15 +12,46 @@ namespace PM02IP_EXAMEN
 {
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
             InitializeComponent();
             Ubicacion();
+
+            
         }
 
-        private void Ubicacion()
+
+        private async void Ubicacion()
         {
-            throw new NotImplementedException();
+            if (!CrossGeolocator.IsSupported)
+            {
+                await DisplayAlert("Error", "Ha ocurrido un error al cargar el plugin", "OK");
+                return;
+            }
+
+          
+
+            CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
+
+            await CrossGeolocator.Current.StartListeningAsync(new TimeSpan(0, 0, 1), 0.5);
+
+        }
+
+        private void Current_PositionChanged(object sender, Plugin.Geolocator.Abstractions.PositionEventArgs e)
+        {
+            if (!CrossGeolocator.Current.IsListening)
+            {
+
+                return;
+            }
+            var position = CrossGeolocator.Current.GetPositionAsync();
+
+            txtlatitud.Text = position.Result.Latitude.ToString();
+            txtlongitud.Text = position.Result.Longitude.ToString();
+
+
+
         }
 
         private async Task validarFormulario()
