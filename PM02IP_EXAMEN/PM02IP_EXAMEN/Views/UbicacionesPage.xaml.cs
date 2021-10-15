@@ -30,13 +30,13 @@ namespace PM02IP_EXAMEN.Views
             lstUbicaciones.ItemsSource = listaubicaciones;
         }
 
-      
+       
+
 
 
         private async void btneliminar_Clicked(object sender, EventArgs e)
         {
-            
-
+           
             var ubicacion = lstUbicaciones.SelectedItem as Models.Localizacion;
             if (ubicacion != null)
             {
@@ -46,7 +46,7 @@ namespace PM02IP_EXAMEN.Views
                 if (answer == true)
                 {
                     await App.DataBaseSQLite.EliminarUbicacion(ubicacion);
-                    lstUbicaciones.RemoveBinding(ListView.ItemsSourceProperty);
+
                 }
 
             }
@@ -56,7 +56,7 @@ namespace PM02IP_EXAMEN.Views
             }
         }
 
-    
+
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
