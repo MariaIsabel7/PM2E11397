@@ -29,13 +29,9 @@ namespace PM02IP_EXAMEN.Views
             var listaubicaciones = await App.DataBaseSQLite.ObtenerListaUbicaciones();
             lstUbicaciones.ItemsSource = listaubicaciones;
         }
-        private async void lstUbicaciones_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            Models.Localizacion item = (Models.Localizacion)e.Item;
 
-         
-        }
       
+
 
         private async void btneliminar_Clicked(object sender, EventArgs e)
         {
@@ -51,7 +47,6 @@ namespace PM02IP_EXAMEN.Views
                 {
                     await App.DataBaseSQLite.EliminarUbicacion(ubicacion);
                     await Navigation.PushAsync(new UbicacionesPage());
-
                 }
 
             }

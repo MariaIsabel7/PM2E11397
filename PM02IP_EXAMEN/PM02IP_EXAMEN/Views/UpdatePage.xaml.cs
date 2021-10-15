@@ -19,9 +19,10 @@ namespace PM02IP_EXAMEN.Views
 
         private async void btnactualizar_Clicked(object sender, EventArgs e)
         {
-            var ubicacion = new Models.Localizacion
+            var local = new Models.Localizacion
             {
-                
+
+                codigo = Convert.ToInt32(txtcodigo.Text),
                 latitud = this.txtlatitud.Text,
                 longitud = this.txtlongitud.Text,
                 descripcionLarga = this.txtdescripcion.Text,
@@ -31,7 +32,7 @@ namespace PM02IP_EXAMEN.Views
 
             ClearScreen();
 
-            if (await App.DataBaseSQLite.GuardarUbicacion(ubicacion) != 0)
+            if (await App.DataBaseSQLite.GuardarUbicacion(local) !=0)
                 await DisplayAlert("Actualizado", "Dato actualizado", "ok");
             else
                 await DisplayAlert("Error", "No se logró actualizar", "ok");

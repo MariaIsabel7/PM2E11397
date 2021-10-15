@@ -7,7 +7,7 @@
 
         <Image Source="logo.png" WidthRequest="300" HeightRequest="100" HorizontalOptions="Center" Margin="0,30,0,0"/>
 
-
+        <Entry Text="{Binding codigo}"  x:Name="txtcodigo" Placeholder="Codigo" Keyboard="Numeric" Margin="30,40,30,0"  FontSize="15" IsVisible="false"/>
 
         <Entry Text="{Binding latitud}"  x:Name="txtlatitud" Placeholder="Latitud" Keyboard="Text" Margin="30,40,30,0"  FontSize="15" IsReadOnly="True"/>
 
