@@ -29,15 +29,13 @@ namespace PM02IP_EXAMEN.Views
             var listaubicaciones = await App.DataBaseSQLite.ObtenerListaUbicaciones();
             lstUbicaciones.ItemsSource = listaubicaciones;
         }
-        private void lstUbicaciones_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void lstUbicaciones_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             Models.Localizacion item = (Models.Localizacion)e.Item;
 
-
-            /*var page = new View.PersonasPageResult();
-            page.BindingContext = item;
-            await Navigation.PushAsync(page);*/
+         
         }
+      
 
         private async void btneliminar_Clicked(object sender, EventArgs e)
         {
@@ -53,6 +51,7 @@ namespace PM02IP_EXAMEN.Views
                 {
                     await App.DataBaseSQLite.EliminarUbicacion(ubicacion);
                     await Navigation.PushAsync(new UbicacionesPage());
+
                 }
 
             }
@@ -62,12 +61,24 @@ namespace PM02IP_EXAMEN.Views
             }
         }
 
-       
+    
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void ImageButton_Clicked(object sender, EventArgs e)
         {
-            
+            var ubicacion = lstUbicaciones.SelectedItem as Models.Localizacion;
+            if (ubicacion != null)
+            {
 
+               
+                var page = new Views.UpdatePage();
+                page.BindingContext = ubicacion;
+                await Navigation.PushAsync(page);
+
+            }
+            else
+            {
+                await DisplayAlert("Alerta", "Seleccione un registro", "Ok");
+            }
         }
     }
 }

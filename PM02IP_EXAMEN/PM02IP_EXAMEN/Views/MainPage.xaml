@@ -16,7 +16,6 @@
         
             <Image Source="logo.png" WidthRequest="300" HeightRequest="100" HorizontalOptions="Center" Margin="0,30,0,0"/>
 
-        <Button Text="Obtener Ubicacion" x:Name="btnobtenerubicacion" HorizontalOptions="Center" Background="Aqua" TextColor="Gray" HeightRequest="40" FontSize="12" Margin="0,20,0,0"/>
 
 
         <Entry  x:Name="txtlatitud" Placeholder="Latitud" Keyboard="Text" Margin="30,40,30,0"  FontSize="15" IsReadOnly="True"/>

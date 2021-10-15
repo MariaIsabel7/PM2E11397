@@ -25,6 +25,9 @@
                             <Label Text="{Binding latitud}" Grid.Row="0" Grid.Column="1" TextColor="Black" x:Name="txtlatitud"/>
                             <Label Text="{Binding longitud}" Grid.Row="0" Grid.Column="2" TextColor="Black" x:Name="txtlongitud"/>
                             <Label Text="{Binding descripcionCorta}" Grid.Row="0" Grid.Column="3" TextColor="Black" x:Name="txtdescripcorta"/>
+                            
+
+
 
                         </Grid>
                     </ViewCell>
@@ -34,8 +37,9 @@
 
         </ListView>
 
-     
+        <ImageButton Source="editar.png" WidthRequest="50" HeightRequest="50" Margin="250,0,50,20" Padding="0,5,0,9" BackgroundColor="GreenYellow" Clicked="ImageButton_Clicked"/>
         <RelativeLayout>
+            
             <Button Text="Eliminar" Margin="20,0,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="btneliminar_Clicked"/>
             <Button Text="Ver Mapa" Margin="190,0,0,60" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150"/>
         </RelativeLayout>
